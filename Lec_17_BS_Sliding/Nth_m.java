@@ -14,10 +14,12 @@ public class Nth_m {
 			double ans = Math.pow(M, 1.0 / N);
 //			System.out.println(ans);
 //			System.out.println(ans ==(int)ans);
-			if (ans == (int) ans || ans - (int) ans > 0.9999) {
+			if (ans == (int) ans) {
 //				System.out.println("int hein !!");
-				System.out.println((int)ans);
-			}else {
+				System.out.println((int) ans);
+			} else if (ans - (int) ans > 0.9999) {
+				System.out.println((int) ans+1);
+			} else {
 				System.out.println(-1);
 			}
 		}
