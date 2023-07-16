@@ -227,4 +227,22 @@ public class BTree {
 			idx++;
 		}
 	}
+	int idx_pre = 0;
+	public BTree(int[] pre, boolean b) {
+		idx_pre = 0;
+		root=createTree(pre);
+		
+	}
+
+	private Node createTree(int[] pre) {
+		if(pre[idx_pre]==-1) {
+			idx_pre++;
+			return null;
+		}
+		Node nn = new Node(pre[idx_pre]);
+		idx_pre++;
+		nn.left = createTree(pre);
+		nn.right = createTree(pre);
+		return nn;
+	}
 }
