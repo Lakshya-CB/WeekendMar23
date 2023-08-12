@@ -13,7 +13,8 @@ public class Client {
 		G.addEdge(6, 7, 13);
 		
 //		System.out.println(G.G);
-		System.out.println(G.hasPath(1, 7));
+//		System.out.println(G.hasPath(1, 7));
+		G.Dijkstra(1);
 
 	}
 }
